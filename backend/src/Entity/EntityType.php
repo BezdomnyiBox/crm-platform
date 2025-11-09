@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 class EntityType
 {
     #[ORM\Id]
-    #[ORM\GeneratedValue('uuid')]
+    #[ORM\GeneratedValue(strategy: 'AUTO')]
     #[ORM\Column(type: 'uuid')]
     private string $id;
 
