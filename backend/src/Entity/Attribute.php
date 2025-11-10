@@ -9,7 +9,7 @@ class Attribute
 {
     #[ORM\Id]
     #[ORM\GeneratedValue(strategy: 'AUTO')]
-    #[ORM\Column(type: 'uuid')]
+    #[ORM\Column(type: 'guid')]
     private string $id;
 
     #[ORM\Column(length: 255)]

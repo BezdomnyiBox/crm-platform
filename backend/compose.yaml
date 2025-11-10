@@ -22,6 +22,8 @@ services:
       - "8000:8000"
     environment:
       DATABASE_URL: "pgsql://${POSTGRES_USER:-crm_user}:${POSTGRES_PASSWORD:-crm_pass}@postgres:5432/${POSTGRES_DB:-crm_db}"
+    volumes:
+      - ./:/app:rw
     depends_on:
       postgres:
         condition: service_healthy
