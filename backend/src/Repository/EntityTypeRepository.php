@@ -15,5 +15,21 @@ class EntityTypeRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, EntityType::class);
     }
+
+    public function findAll(): array
+    {
+        return $this->findAll();
+    }
+
+    public function findOneById(string $id): ?EntityType
+    {
+        return $this->findOneBy(['id' => $id]);
+    }
+
+    public function save(EntityType $entityType): void
+    {
+        $this->getEntityManager()->persist($entityType);
+        $this->getEntityManager()->flush();
+    }
 }
 
